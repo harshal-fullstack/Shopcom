@@ -1,0 +1,37 @@
+<div class="container my-5">
+  <div class="mt-2">
+        <button class="btn btn-secondary" (click)="backToProducts()">
+          <i class="fa fa-arrow-left"></i> Back to Products
+        </button>
+    </div>
+    <div *ngIf="product" class="row">
+      <div class="col-md-5">
+        <img [src]="product.image" class="img-fluid product-detail-image" alt="{{ product.title }}">
+      </div>
+      <div class="col-md-7">
+        <h2>{{ product.title }}</h2>
+        <p class="text-secondary mb-2">{{ product.category }}</p>
+        <hr>
+        <div class="d-flex align-items-center mb-3">
+          <span class="badge bg-success me-2">{{ product.rating.rate }} <i class="fa fa-star"></i></span>
+          <span class="text-secondary">{{ product.rating.count }} ratings</span>
+        </div>
+        <p class="text-primary h3 fw-bold">${{ product.price }}</p>
+        <p class="mt-4">{{ product.description }}</p>
+        <div class="mt-4">
+          <button class="btn btn-primary me-2" (click)="addToCart(product)">
+            <i class="fa fa-shopping-cart"></i> Add to Cart
+          </button>
+          <button class="btn btn-success" (click)="buyNow(product)">
+            <i class="fa fa-credit-card"></i> Buy Now
+          </button>
+        </div>
+      </div>
+  </div>
+  <div *ngIf="!product" class="text-center mt-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-2">Loading product details...</p>
+  </div>
+</div>

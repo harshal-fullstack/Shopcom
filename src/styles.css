@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: #74786b;
+  font-family: 'Arial', sans-serif;
+}
+
+.product-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  height: 200px;
+  object-fit: contain;
+  padding: 15px;
+  background-color: #683232;
+}
+
+.product-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card .card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  height: 40px;
+  overflow: hidden;
+}
+
+.product-detail-image {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(35, 171, 85, 0.1);
+}
+
+.cart-product-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.empty-cart-img {
+  width: 150px;
+  opacity: 0.7;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
